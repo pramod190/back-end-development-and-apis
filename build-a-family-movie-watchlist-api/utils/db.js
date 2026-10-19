@@ -20,7 +20,7 @@ export function findByUsername(username) {
 }
 
 export function findById(id) {
-  return users.find((u) => u.id === id) || null;
+  return users.find((u) => String(u.id) === String(id)) || null;
 }
 
 export function getWatchlist(userId) {
